@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ukmalert-web",
+      "runtimeExecutable": "flutter",
+      "runtimeArgs": ["run", "-d", "web-server", "--web-port=8080", "--web-hostname=localhost"],
+      "port": 8080
+    },
+    {
+      "name": "ukmalert-web-serve",
+      "runtimeExecutable": "serve",
+      "runtimeArgs": ["-s", "C:/Users/ajmal/Downloads/stitch/ukmalert_web/build/web", "-l", "8080"],
+      "port": 8080
+    }
+  ]
+}

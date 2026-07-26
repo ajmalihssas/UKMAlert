@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ajmal/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/d1058465-187f-4c07-ab36-387296f77681/6b2e0786-f67c-42f7-af4e-bc1f042bc7f1/skills/docx/**)",
+      "Bash(python scripts/office/unpack.py \"C:\\\\Users\\\\ajmal\\\\Downloads\\\\D6 Testing.docx\" \"C:\\\\Users\\\\ajmal\\\\Downloads\\\\D6_unpacked\")",
+      "Bash(py --version)",
+      "Bash(pandoc --version)",
+      "Bash(pandoc \"C:\\\\Users\\\\ajmal\\\\Downloads\\\\D6 Testing.docx\" -t markdown)",
+      "Bash(flutter --version)",
+      "Bash(flutter pub *)",
+      "Bash(flutter build *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx --version)",
+      "Bash(npm --version)",
+      "PowerShell(Get-Process -Name \"dart\",\"flutter\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(netstat -ano)",
+      "PowerShell(head -3)"
+    ]
+  }
+}

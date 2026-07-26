@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil - UKMAlert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#584400",
+            "primary": "#9e0000",
+            "tertiary": "#745b00",
+            "surface-variant": "#e2e2e5",
+            "inverse-surface": "#2f3133",
+            "on-secondary-container": "#294f83",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#001b3c",
+            "on-primary-fixed-variant": "#930000",
+            "surface-container": "#eeeef0",
+            "background": "#f9f9fc",
+            "tertiary-container": "#d0a600",
+            "surface-container-high": "#e8e8ea",
+            "on-primary-container": "#ffdad4",
+            "tertiary-fixed-dim": "#f1c100",
+            "on-primary-fixed": "#410000",
+            "on-secondary-fixed-variant": "#1f477b",
+            "primary-container": "#cc0000",
+            "on-tertiary-fixed": "#241a00",
+            "on-surface-variant": "#5e3f3a",
+            "on-background": "#1a1c1e",
+            "tertiary-fixed": "#ffe08b",
+            "secondary-container": "#9fc2fe",
+            "outline": "#926e69",
+            "on-tertiary-container": "#4f3d00",
+            "surface-container-highest": "#e2e2e5",
+            "primary-fixed": "#ffdad4",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f9f9fc",
+            "inverse-on-surface": "#f0f0f3",
+            "surface-dim": "#dadadc",
+            "inverse-primary": "#ffb4a8",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "surface": "#f9f9fc",
+            "secondary": "#3a5f94",
+            "on-surface": "#1a1c1e",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f3f6",
+            "outline-variant": "#e8bdb6",
+            "on-primary": "#ffffff",
+            "surface-tint": "#c00000",
+            "secondary-fixed": "#d5e3ff",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#a7c8ff",
+            "primary-fixed-dim": "#ffb4a8"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .spring-behavior {
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 ease-out hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-red-700 dark:text-red-500" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight text-red-700 dark:text-red-500">Profile</h1>
+</div>
+<button class="active:scale-95 duration-200 ease-out hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-red-700 dark:text-red-500" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-md mx-auto space-y-8">
+<!-- User Header Section -->
+<section class="flex flex-col items-center text-center space-y-4">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-tertiary-fixed ring-offset-2">
+<img alt="Aiman Hakim Profile" class="w-full h-full object-cover" data-alt="Close-up studio portrait of a confident young Southeast Asian man with short dark hair and a professional look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbMMaRjZdYVZQF3YeGuPbquna-y2hTMkg4lp1o4ycW-oH2n5ZFS6jGQEWc64J6ePGDeb7qBDZTE3dHLVT4JrctZKxRxQez-6wp_f2ZwaD-bf9w6q-ZicDwqEMnS3qUZIXrO1GMBB93YFVsNzjRMcgCTdIH71DxnMjAoOzoPdc5ZkGCkOCm8drt1ZkHWUt_3uZtdp3Jay890vTAHKkXNYotWTw1Z4mrh0phwEKSMzH7UDj8BgW7O8En6Sh0l2-ZQ4Osze6DMgYZ0A2E"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full border-2 border-white shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline font-extrabold text-2xl tracking-tight text-on-background">Aiman Hakim</h2>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-semibold">Student - A182736</p>
+</div>
+</section>
+<!-- Emergency Contact Bento Card -->
+<section class="bg-primary/5 rounded-3xl p-6 border-l-4 border-primary">
+<div class="flex justify-between items-center mb-4">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Priority Security</span>
+<h3 class="font-headline font-bold text-lg">Emergency Contact</h3>
+</div>
+<button class="bg-primary-container text-white px-4 py-2 rounded-full text-xs font-bold active:scale-95 transition-transform">
+          Manage
+        </button>
+</div>
+<div class="flex items-center gap-4 bg-white/60 dark:bg-zinc-900/40 p-4 rounded-2xl backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="family_history">family_history</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm">Zulkifli Hakim (Father)</p>
+<p class="text-xs text-zinc-500">+60 12-345 6789</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</section>
+<!-- Account Settings Group -->
+<div class="space-y-6">
+<h4 class="font-label text-xs uppercase tracking-widest text-zinc-400 px-2">Account Settings</h4>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="person_outline">person_outline</span>
+<span class="font-semibold text-sm">Personal Information</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="lock_open">lock_open</span>
+<span class="font-semibold text-sm">Change Password</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="font-semibold text-sm">Security Settings</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- App Preferences Group -->
+<div class="space-y-6">
+<h4 class="font-label text-xs uppercase tracking-widest text-zinc-400 px-2">Preferences</h4>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden">
+<div class="flex items-center justify-between p-5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="dark_mode">dark_mode</span>
+<span class="font-semibold text-sm">Dark Mode</span>
+</div>
+<div class="w-12 h-6 bg-zinc-200 rounded-full relative">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="notifications_active">notifications_active</span>
+<span class="font-semibold text-sm">Notification Settings</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="language">language</span>
+<div class="flex flex-col items-start">
+<span class="font-semibold text-sm">Language</span>
+<span class="text-[10px] text-zinc-500 uppercase tracking-tighter">Bahasa Malaysia / English</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Support Group -->
+<div class="space-y-6">
+<h4 class="font-label text-xs uppercase tracking-widest text-zinc-400 px-2">Support &amp; Information</h4>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-500" data-icon="help_center">help_center</span>
+<span class="font-semibold text-sm">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-500" data-icon="description">description</span>
+<span class="font-semibold text-sm">Terms of Service</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-zinc-100 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-500" data-icon="info">info</span>
+<span class="font-semibold text-sm">About UKMAlert</span>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Logout Action -->
+<button class="w-full py-5 flex items-center justify-center gap-3 bg-secondary-container/30 text-on-secondary-container rounded-2xl font-headline font-bold active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+      Sign Out
+    </button>
+<!-- Version Info -->
+<div class="text-center pb-10">
+<p class="text-[10px] font-label uppercase tracking-widest text-zinc-400">UKMAlert v2.4.0 (Build 992)</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md flex justify-around items-center px-4 pb-6 pt-2 z-50 rounded-t-3xl border-t border-zinc-100/10 shadow-[0px_-12px_32px_rgba(26,28,30,0.08)]">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-red-600 transition-colors active:scale-90 spring-behavior duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope font-semibold text-[10px] uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-red-600 transition-colors active:scale-90 spring-behavior duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-manrope font-semibold text-[10px] uppercase tracking-wider">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-red-600 transition-colors active:scale-90 spring-behavior duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-manrope font-semibold text-[10px] uppercase tracking-wider">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-2xl px-5 py-2 active:scale-90 spring-behavior duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-manrope font-semibold text-[10px] uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

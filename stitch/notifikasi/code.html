@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifikasi - UKMAlert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1e",
+                        "tertiary-fixed": "#ffe08b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#e8bdb6",
+                        "surface-dim": "#dadadc",
+                        "surface-container": "#eeeef0",
+                        "surface-variant": "#e2e2e5",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-fixed-variant": "#930000",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#1f477b",
+                        "secondary-container": "#9fc2fe",
+                        "inverse-on-surface": "#f0f0f3",
+                        "tertiary-container": "#d0a600",
+                        "outline": "#926e69",
+                        "background": "#f9f9fc",
+                        "surface-container-highest": "#e2e2e5",
+                        "surface-tint": "#c00000",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#745b00",
+                        "on-primary-fixed": "#410000",
+                        "inverse-primary": "#ffb4a8",
+                        "surface-container-high": "#e8e8ea",
+                        "inverse-surface": "#2f3133",
+                        "primary-container": "#cc0000",
+                        "on-surface": "#1a1c1e",
+                        "on-primary-container": "#ffdad4",
+                        "primary": "#9e0000",
+                        "on-secondary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9fc",
+                        "on-tertiary-container": "#4f3d00",
+                        "secondary": "#3a5f94",
+                        "on-surface-variant": "#5e3f3a",
+                        "on-secondary-container": "#294f83",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-low": "#f3f3f6",
+                        "surface-bright": "#f9f9fc"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .spring-transition {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .tonal-shift {
+            background-color: rgba(243, 243, 246, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9fc;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center px-4 h-16 w-full max-w-none">
+<button class="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-red-700 dark:text-red-500" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-bold text-lg ml-2 text-on-surface">Notifikasi</h1>
+<div class="flex-grow"></div>
+<button class="text-secondary font-semibold text-sm px-3 py-1 hover:bg-secondary-fixed/30 transition-colors rounded-full active:scale-95">
+                Mark all as read
+            </button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-2xl mx-auto min-h-screen">
+<!-- Search and Filter -->
+<section class="mb-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60" data-icon="search">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all font-body text-sm" placeholder="Cari notifikasi..." type="text"/>
+</div>
+<div class="flex gap-2 mt-4 overflow-x-auto pb-2 scrollbar-hide">
+<span class="px-4 py-1.5 bg-primary text-on-primary rounded-full text-xs font-bold font-label tracking-wide whitespace-nowrap">SEMUA</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold font-label tracking-wide whitespace-nowrap hover:bg-surface-container-highest transition-colors">EMERGENCY</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold font-label tracking-wide whitespace-nowrap hover:bg-surface-container-highest transition-colors">UPDATES</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold font-label tracking-wide whitespace-nowrap hover:bg-surface-container-highest transition-colors">CAMPUS</span>
+</div>
+</section>
+<!-- Notification List -->
+<div class="space-y-4">
+<!-- High Priority: Emergency -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 relative overflow-hidden shadow-sm transition-all active:scale-[0.98]">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-error-container flex items-center justify-center rounded-2xl flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="emergency" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold font-label text-primary uppercase tracking-widest">Emergency Alert</span>
+<span class="text-[10px] font-medium text-on-surface-variant/60">SEKARANG</span>
+</div>
+<h3 class="font-headline font-bold text-base text-on-surface leading-tight mb-1">Evakuasi Bangunan: Blok A</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Kebocoran gas dikesan di tingkat 3 Blok A. Sila tinggalkan bangunan melalui tangga keselamatan dengan segera.</p>
+</div>
+</div>
+</div>
+<!-- Medium Priority: Incident -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 relative overflow-hidden shadow-sm transition-all active:scale-[0.98]">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-2xl flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-fixed" data-icon="warning">warning</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold font-label text-tertiary-container uppercase tracking-widest">Incident Update</span>
+<span class="text-[10px] font-medium text-on-surface-variant/60">2 JAM LEPAS</span>
+</div>
+<h3 class="font-headline font-bold text-base text-on-surface leading-tight mb-1">Penutupan Laluan Utama</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Laluan berdekatan Pusanika ditutup sementara bagi kerja-kerja pembersihan pokok tumbang akibat hujan lebat.</p>
+</div>
+</div>
+</div>
+<!-- Normal Priority: General -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 relative overflow-hidden shadow-sm opacity-70 transition-all active:scale-[0.98]">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-container"></div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-2xl flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="campaign">campaign</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold font-label text-secondary uppercase tracking-widest">Campus Announcement</span>
+<span class="text-[10px] font-medium text-on-surface-variant/60">HARI INI, 09:15</span>
+</div>
+<h3 class="font-headline font-bold text-base text-on-surface leading-tight mb-1">Pendaftaran Kolej Kediaman</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Sistem pendaftaran kolej kediaman untuk semester hadapan akan dibuka pada 15 Oktober ini. Sila semak portal.</p>
+</div>
+<div class="w-2 h-2 bg-on-surface-variant/20 rounded-full mt-1"></div>
+</div>
+</div>
+<!-- High Priority: Medical -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 relative overflow-hidden shadow-sm transition-all active:scale-[0.98]">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-error-container flex items-center justify-center rounded-2xl flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="medical_services" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold font-label text-primary uppercase tracking-widest">Emergency Alert</span>
+<span class="text-[10px] font-medium text-on-surface-variant/60">SEMALAM</span>
+</div>
+<h3 class="font-headline font-bold text-base text-on-surface leading-tight mb-1">Keperluan Penderma Darah</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Unit Kesihatan UKM memerlukan penderma darah jenis O+ dengan segera bagi kes kecemasan di hospital berdekatan.</p>
+</div>
+</div>
+</div>
+<!-- News/Editorial Style Detail Card -->
+<div class="mt-8 mb-4 px-2">
+<h4 class="font-headline font-extrabold text-xl mb-4 text-on-surface-variant/40">ARKIB MINGGU INI</h4>
+<div class="bg-surface-container rounded-[2rem] p-6 space-y-6">
+<div class="flex justify-between items-center border-b border-on-surface-variant/10 pb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<p class="font-body text-sm font-medium">Ujian siren bulanan selesai</p>
+</div>
+<span class="text-xs text-on-surface-variant/40">Khamis</span>
+</div>
+<div class="flex justify-between items-center border-b border-on-surface-variant/10 pb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<p class="font-body text-sm font-medium">Penyelenggaraan sistem IT</p>
+</div>
+<span class="text-xs text-on-surface-variant/40">Rabu</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="map">map</span>
+<p class="font-body text-sm font-medium">Peta zon selamat dikemaskini</p>
+</div>
+<span class="text-xs text-on-surface-variant/40">Isnin</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 py-3 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-[0px_-12px_32px_rgba(26,28,30,0.08)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1 hover:text-red-600 active:scale-90 spring-transition" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] uppercase tracking-wider font-bold mt-1">Utama</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-2xl px-4 py-1 active:scale-90 spring-transition" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-manrope text-[10px] uppercase tracking-wider font-bold mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1 hover:text-red-600 active:scale-90 spring-transition" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-manrope text-[10px] uppercase tracking-wider font-bold mt-1">Peta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1 hover:text-red-600 active:scale-90 spring-transition" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[10px] uppercase tracking-wider font-bold mt-1">Profil</span>
+</a>
+</nav>
+</body></html>

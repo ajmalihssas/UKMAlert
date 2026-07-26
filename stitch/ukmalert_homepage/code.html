@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#ffb4a8",
+                        "tertiary-container": "#d0a600",
+                        "on-primary-container": "#ffdad4",
+                        "surface": "#f9f9fc",
+                        "error-container": "#ffdad6",
+                        "outline": "#926e69",
+                        "on-surface": "#1a1c1e",
+                        "on-tertiary-container": "#4f3d00",
+                        "inverse-surface": "#2f3133",
+                        "secondary-fixed": "#d5e3ff",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "surface-container-highest": "#e2e2e5",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "on-secondary-fixed-variant": "#1f477b",
+                        "surface-bright": "#f9f9fc",
+                        "secondary": "#3a5f94",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "surface-container-low": "#f3f3f6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#410000",
+                        "inverse-primary": "#ffb4a8",
+                        "on-surface-variant": "#5e3f3a",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#9fc2fe",
+                        "on-secondary-fixed": "#001b3c",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-background": "#1a1c1e",
+                        "tertiary": "#745b00",
+                        "surface-variant": "#e2e2e5",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-primary-fixed-variant": "#930000",
+                        "primary-container": "#cc0000",
+                        "tertiary-fixed": "#ffe08b",
+                        "background": "#f9f9fc",
+                        "surface-container": "#eeeef0",
+                        "surface-tint": "#c00000",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "on-secondary-container": "#294f83",
+                        "outline-variant": "#e8bdb6",
+                        "primary": "#9e0000"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sos-pulse::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            background: #9e0000;
+            opacity: 0.4;
+            z-index: -1;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl z-50 shadow-xl shadow-slate-900/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-700 dark:text-red-500 text-2xl" data-icon="emergency">emergency</span>
+<h1 class="font-manrope font-extrabold tracking-tight text-xl font-black text-red-700 dark:text-red-600">UKMAlert</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-primary overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional studio portrait of a young man with a friendly expression against a neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuQd9sI2h97z_yZ-PZULN43kPCqSWCF2CAJK8jbUWgnuoqCHfHMlt9r93F6uN3YvpDgOKQ-SSZkS7ZGisjSIlN7hyMV2H2cMhnOEgRzbrwPzp7NBKBsJrBU_jtvYfY7KmeY4cravaCo6B6ka7MluwVbuo0WmxuS5fAK8QD0Isb72O7NyRN1WtzIhKyTSjudGGTIn3otkPIqlU2LnUzT7FKp0f5fk-23h5V6V93-CfZU2aM0oGQIHrnOrFJiAs_dc7esCGpzGYEjG_S"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-5 min-h-screen">
+<!-- SOS Hero Section -->
+<section class="flex flex-col items-center justify-center py-10 mb-8">
+<div class="relative flex items-center justify-center">
+<div class="sos-pulse"></div>
+<button class="relative z-10 w-48 h-48 rounded-full bg-gradient-to-b from-primary to-primary-container shadow-[0px_12px_32px_rgba(158,0,0,0.3)] flex flex-col items-center justify-center active:scale-90 transition-transform duration-200">
+<span class="text-white font-headline font-extrabold text-5xl tracking-tighter">SOS</span>
+<span class="text-red-100 font-label text-xs uppercase tracking-widest mt-1">Hold to trigger</span>
+</button>
+</div>
+<p class="mt-8 text-center text-on-surface-variant max-w-[280px] font-medium leading-tight">
+                Press for 3 seconds to send emergency alert to UKM Security and your contacts.
+            </p>
+</section>
+<!-- Service Bento Grid -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<div class="col-span-1 bg-surface-container-low rounded-[2rem] p-6 flex flex-col justify-between aspect-square hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="campaign">campaign</span>
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Laporan Insiden</h3>
+<p class="text-xs text-on-surface-variant mt-1">Report incidents now</p>
+</div>
+</div>
+<div class="col-span-1 bg-secondary-container rounded-[2rem] p-6 flex flex-col justify-between aspect-square active:scale-95 transition-all">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="map">map</span>
+<div>
+<h3 class="font-headline font-bold text-on-secondary-container leading-tight">Peta Lokasi</h3>
+<p class="text-xs text-on-secondary-container/70 mt-1">View campus safety</p>
+</div>
+</div>
+<div class="col-span-1 bg-tertiary-fixed rounded-[2rem] p-6 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl" data-icon="shield">shield</span>
+<div>
+<h3 class="font-headline font-bold text-on-tertiary-fixed leading-tight">Panduan Keselamatan</h3>
+<p class="text-xs text-on-tertiary-fixed-variant/70 mt-1">Safety protocols</p>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container-low rounded-[2rem] p-6 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="contact_support">contact_support</span>
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Hubungi Bantuan</h3>
+<p class="text-xs text-on-surface-variant mt-1">Talk to an agent</p>
+</div>
+</div>
+</section>
+<!-- Emergency Numbers Section -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-4 px-2">
+<h2 class="font-headline font-extrabold text-lg tracking-tight uppercase">Emergency Numbers</h2>
+<div class="h-[2px] flex-grow ml-4 bg-surface-container-high rounded-full"></div>
+</div>
+<div class="space-y-3">
+<!-- Polis Bangi -->
+<div class="group bg-surface-container-lowest border-l-4 border-primary rounded-2xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" data-icon="local_police">local_police</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Polis Bangi</p>
+<p class="font-mono text-sm text-on-surface-variant">03-8925 1222</p>
+</div>
+</div>
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-active:scale-90 transition-transform" href="tel:0389251222">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</a>
+</div>
+<!-- Bomba Bangi -->
+<div class="group bg-surface-container-lowest border-l-4 border-primary rounded-2xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" data-icon="fire_truck">fire_truck</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Bomba Bangi</p>
+<p class="font-mono text-sm text-on-surface-variant">03-8925 4444</p>
+</div>
+</div>
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-active:scale-90 transition-transform" href="tel:0389254444">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</a>
+</div>
+<!-- UKM Security -->
+<div class="group bg-surface-container-lowest border-l-4 border-secondary rounded-2xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" data-icon="security">security</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">UKM Security</p>
+<p class="font-mono text-sm text-on-surface-variant">03-8921 4444</p>
+</div>
+</div>
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-active:scale-90 transition-transform" href="tel:0389214444">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Awareness Card -->
+<section class="mb-6">
+<div class="relative rounded-[2rem] overflow-hidden aspect-[16/9]">
+<img alt="Campus Security" class="w-full h-full object-cover" data-alt="Modern high-tech security operations center with multiple screens displaying campus maps and data visualizations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-gv5-4J9m_L-TIxy0Kl4H352BUB7bT40xIaFtwzgJpobQXNq9MRDssajgfb3EGdf9JU8PC8-dIljIayZrcln_TZq8cssewrfdbZmd-93BFHn51BucH_HfsDFq6vW3APY4J6WXbWXxPVZFNXHgoMDZB1IY5BQRS09NCBL3rxxHH0CCt8p8x4Pxrumb_R02jjUWBgJWWa3QJXBHTM4YS-BNP-XRrI4iGxEVmYj0pRC99rY753st_ov8hf-bJD7xsUgDMr-NblgAdiO6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface to-transparent p-6 flex flex-col justify-end">
+<h4 class="text-white font-headline font-bold">Safe Campus Initiative</h4>
+<p class="text-white/80 text-sm">Security patrols are active in Zones A &amp; C until 02:00 AM.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[32px] shadow-[0px_-12px_32px_rgba(26,28,30,0.08)]">
+<button class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-5 py-2 scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[11px] font-bold uppercase tracking-wider mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-inter text-[11px] font-bold uppercase tracking-wider mt-1">Maps</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="font-inter text-[11px] font-bold uppercase tracking-wider mt-1">Reports</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-bold uppercase tracking-wider mt-1">Profile</span>
+</button>
+</nav>
+</body></html>
